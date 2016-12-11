@@ -1,8 +1,8 @@
 import sys
-import dichotomy_one
-import dichotomy_two
-import golden_ratio
-import fibonacci
+import Code.dichotomy_one
+import Code.dichotomy_two
+import Code.golden_ratio
+import Code.fibonacci
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -17,25 +17,25 @@ def main():
 
 
     # print("Метод дихотомии-1")
-    # y_opt, x_opt, iter_num_done = dichotomy_one.dichotomy_method(target_function, epsilon, accuracy, max_iter, a, b)
+    # y_opt, x_opt, iter_num_done = Code.dichotomy_one.dichotomy_method(target_function, epsilon, accuracy, max_iter, a, b)
     # # print("func value ", y_opt, " at ", x_opt, " iterations done ", iter_num_done)
     # print('func value is %f at x = %f, iterations done %d' % (y_opt, x_opt, iter_num_done))
     # print()
 
     # print("Метод дихотомии-2")
-    # y_opt, x_opt, iter_num_done = dichotomy_two.dichotomy_method(target_function, accuracy, max_iter, a, b)
+    # y_opt, x_opt, iter_num_done = Code.dichotomy_two.dichotomy_method(target_function, accuracy, max_iter, a, b)
     # print('func value is %f at x = %f, iterations done %d' % (y_opt, x_opt, iter_num_done))
     # print()
 
     # print("Метод золотого сечения")
-    # y_opt, x_opt, iter_num_done = golden_ratio.golden_ratio_method(target_function, accuracy, accuracy, max_iter, a, b, 1.68)
+    # y_opt, x_opt, iter_num_done = Code.golden_ratio.golden_ratio_method(target_function, accuracy, accuracy, max_iter, a, b, 1.68)
     # print('func value is %f at x = %f, iterations done %d' % (y_opt, x_opt, iter_num_done))
     # print()
 
-    print("Метод Фибоначчи")
-    y_opt, x_opt, iter_num_done = fibonacci.fibonacci_method(target_function, epsilon, accuracy, max_iter, a, b)
-    print('func value is %f at x = %f, iterations done %d' % (y_opt, x_opt, iter_num_done))
-    print()
+    # print("Метод Фибоначчи")
+    # y_opt, x_opt, iter_num_done = Code.fibonacci.fibonacci_method(target_function, epsilon, accuracy, max_iter, a, b)
+    # print('func value is %f at x = %f, iterations done %d' % (y_opt, x_opt, iter_num_done))
+    # print()
 
     # построить график зависимости числа итераций от точности
 
