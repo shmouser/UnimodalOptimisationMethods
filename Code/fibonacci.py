@@ -43,5 +43,9 @@ def fibonacci_method(target_function, epsilon,  x_acc, iter_max, a, b):
     last_test = (a + b) / 2
     last_edge = last_test + epsilon if fun_expr.subs(x, last_test - epsilon) < fun_expr.subs(x, last_test + epsilon)\
         else last_test - epsilon
-    return fun_expr.subs(x, last_edge), last_edge, n - 1
+    if last_edge > last_test:
+        b = last_edge
+    else:
+        a = last_edge
+    return fun_expr.subs(x, last_edge), last_edge, n - 1, abs(b - a)
 

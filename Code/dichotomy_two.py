@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sympy.utilities.lambdify import lambdify
 
 
-def dichotomy_method(target_function, x_acc, iter_max, a, b):
+def dichotomy_method(target_function, epsilon,  x_acc, iter_max, a, b):
     x, y, z = sm.symbols("x y z")
     fun_expr = sm.sympify(target_function)
     iter_count = 0
@@ -24,4 +24,4 @@ def dichotomy_method(target_function, x_acc, iter_max, a, b):
 
     x_opt = (b+a)/2
 
-    return fun_expr.subs(x, x_opt), x_opt, iter_count
+    return fun_expr.subs(x, x_opt), x_opt, iter_count, abs(b - a)

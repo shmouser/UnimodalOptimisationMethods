@@ -22,6 +22,6 @@ def dichotomy_method(target_function, epsilon, x_acc, iter_max, a, b):
 
     x_opt = (b+a)/2
 
-    return fun_expr.subs(x, x_opt), x_opt, iter_count
+    return fun_expr.subs(x, x_opt), x_opt, iter_count, abs(b - a)
 
 

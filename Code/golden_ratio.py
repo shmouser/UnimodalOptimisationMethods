@@ -23,11 +23,11 @@ def golden_ratio_method(target_function, epsilon, x_acc, iter_max, a, b, golden_
     last_edge = last_test + epsilon if fun_expr.subs(x, last_test - epsilon) < fun_expr.subs(x, last_test + epsilon) \
         else last_test - epsilon
     if last_edge > last_test:
-        b = next_edge
+        b = last_edge
     else:
-        a = next_edge
+        a = last_edge
     x_opt = (b + a)/2
 
-    return fun_expr.subs(x, x_opt), x_opt, iter_count
+    return fun_expr.subs(x, x_opt), x_opt, iter_count, abs(b - a)
 
 
