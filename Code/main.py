@@ -54,16 +54,16 @@ def main():
     fibonacci_seg_list = []
 
     for i in x_range:
-        tmp_1, tmp_2 = Code.dichotomy_one.dichotomy_method(target_function, epsilon, i, max_iter, a, b)[2], Code.dichotomy_one.dichotomy_method(target_function, epsilon, i, max_iter, a, b)[3]
+        *first, tmp_1, tmp_2 = Code.dichotomy_one.dichotomy_method(target_function, epsilon, i, max_iter, a, b)
         dichotomy_one_iter_list.append(tmp_1)
         dichotomy_one_seg_list.append(tmp_2)
-        tmp_1, tmp_2 = Code.dichotomy_two.dichotomy_method(target_function, epsilon, i, max_iter, a, b)[2], Code.dichotomy_two.dichotomy_method(target_function, epsilon, i, max_iter, a, b)[3]
+        *first, tmp_1, tmp_2 = Code.dichotomy_two.dichotomy_method(target_function, epsilon, i, max_iter, a, b)
         dichotomy_two_iter_list.append(tmp_1)
         dichotomy_two_seg_list.append(tmp_2)
-        tmp_1, tmp_2 = Code.golden_ratio.golden_ratio_method(target_function, epsilon, i, max_iter, a, b, 1.68)[2], Code.golden_ratio.golden_ratio_method(target_function, epsilon, i, max_iter, a, b, 1.68)[3]
+        *first, tmp_1, tmp_2 = Code.golden_ratio.golden_ratio_method(target_function, epsilon, i, max_iter, a, b, 1.68)
         golden_ratio_iter_list.append(tmp_1)
         golden_ratio_seg_list.append(tmp_2)
-        tmp_1, tmp_2 = Code.fibonacci.fibonacci_method(target_function, epsilon, i, max_iter, a, b)[2], Code.fibonacci.fibonacci_method(target_function, epsilon, i, max_iter, a, b)[3]
+        *first, tmp_1, tmp_2 = Code.fibonacci.fibonacci_method(target_function, epsilon, i, max_iter, a, b)
         fibonacci_iter_list.append(tmp_1)
         fibonacci_seg_list.append(tmp_2)
     # print(dichotomy_one_iter_list)
