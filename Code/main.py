@@ -71,23 +71,29 @@ def main():
     # print(golden_ratio_iter_list)
     # print(fibonacci_iter_list)
 
-    # subplot 1
-    plt.subplot(121)
-    plt.plot(x_range, dichotomy_one_iter_list, label='Dichotomy - 1')
-    plt.plot(x_range, dichotomy_two_iter_list, label='Dichotomy - 2')
-    plt.plot(x_range, golden_ratio_iter_list, label='Golden Ratio method')
-    plt.plot(x_range, fibonacci_iter_list, label='Fibonacci method')
+    plt.figure(1)
+    plt.plot(x_range, dichotomy_one_iter_list, label='Dichotomy-1')
+    plt.plot(x_range, dichotomy_two_iter_list, label='Dichotomy-2')
+    plt.plot(x_range, golden_ratio_iter_list, label='Golden Ratio')
+    plt.plot(x_range, fibonacci_iter_list, label='Fibonacci')
     plt.grid(True)
     plt.title('f  = ' + target_function)
     plt.xlabel('accuracy')
     plt.ylabel('iterations')
-
-    # subplot 2
-    plt.subplot(122)
-
     plt.legend()
-    plt.show()
 
+    plt.figure(2)
+    plt.plot(x_range, dichotomy_one_seg_list, label='Dichotomy-1')
+    plt.plot(x_range, dichotomy_two_seg_list, label='Dichotomy-2')
+    plt.plot(x_range, golden_ratio_seg_list, label='Golden Ratio')
+    plt.plot(x_range, fibonacci_seg_list, label='Fibonacci')
+    plt.grid(True)
+    plt.title('f  = ' + target_function)
+    plt.xlabel('accuracy')
+    plt.ylabel('final interval')
+    plt.legend()
+
+    plt.show()
 
 
 if __name__ == '__main__':
